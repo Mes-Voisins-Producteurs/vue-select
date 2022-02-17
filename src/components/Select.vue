@@ -399,6 +399,13 @@ export default {
         }
       },
     },
+    
+    /**
+     * Set the input's role, e.g: presentation
+     */
+    inputRole: {
+      type: String,
+    },
 
     /**
      * Enable/disable creating options from searchEl.
@@ -754,6 +761,7 @@ export default {
             'aria-autocomplete': 'list',
             'aria-labelledby': `vs${this.uid}__combobox`,
             'aria-controls': `vs${this.uid}__listbox`,
+            role: this.inputRole,
             ref: 'search',
             type: 'search',
             autocomplete: this.autocomplete,
